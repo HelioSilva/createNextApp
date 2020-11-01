@@ -5,7 +5,9 @@ type Props = {
   title: string;
 };
 
-export default function Home({ title = "Default" }: Props) {
+export default function Home({
+  title = process.env.titleDev as string,
+}: Props) {
   return (
     <div className={styles.container}>
       <Head>
